@@ -1,0 +1,56 @@
+<!--
+
+This is the standard ThreeJS-based boilerplate for webAR
+	currently being used by the eleVR team.
+
+This requires the use of a smartphone with webGL and a reflecting pass-through AR headset. Otherwise, everything will appear reversed.
+
+This boilerplate is based on Mozilla's boilerplate: https://github.com/MozVR/ar-web-examples/tree/master/threejs-ar-boilerplate
+
+It has been developed with the help of a great many people including (but not limited to) Vi Hart, Andrew Lutomirski, Henry Segerman, and the Firefox webVR team.
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>webAR boilerplate</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				padding: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body></body>
+
+	<!--
+	three.js 3d library
+	-->
+	<script src="js/lib/three.min.js"></script>
+
+	<!--
+	PhoneAR acquires positional information from phone orientation. This is used by ARControls.js
+	ARControls.js acquires positional information from connected VR devices and applies the transformations to a three.js camera object.
+	 -->
+	<script src="js/ar/PhoneAR.js"></script>
+	<script src="js/ar/ARControls.js"></script>
+
+	<!--
+	AREffect.js handles stereo camera setup and rendering.
+	-->
+	<script src="js/ar/AREffect.js"></script>
+
+	<!--
+	This file is where the AR scene is generated. We include some Demo stuff in this file.
+	To create your own you can use "blankWebAR.js"
+	-->
+	<script src="js/demoWebAR.js"></script>
+</html>
