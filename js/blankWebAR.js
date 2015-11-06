@@ -2,6 +2,7 @@
 var renderer = new THREE.WebGLRenderer( { antialias: true } );
 
 // Append the canvas element created by the renderer to document body element.
+renderer.domElement.style.transform = "scaleX(-1)";
 document.body.appendChild( renderer.domElement );
 
 //Create a three.js scene
